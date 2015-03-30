@@ -6,9 +6,9 @@ module Grape
       module Authentication
         extend ActiveSupport::Concern
         included do
-          before do
-            env['devise.mapping'] = ::Devise::Mapping.find_by_path!(request.path)
-          end
+          #before do
+          #  env['devise.mapping'] = ::Devise::Mapping.find_by_path!(request.path)
+          #end
 
           helpers do
             delegate :session, to: :request
